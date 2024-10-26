@@ -1,0 +1,10 @@
+[package]
+name = "chacha20_cipher"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+rand = "0.8"              # Adjust to the latest version if necessary
+rand_chacha = "0.3"       # Adjust to the latest version if necessary
+chacha20 = "0.9"         # Adjust to the latest version if necessary
+cipher = "0.4"            # Make sure to include this if you're using cipher traits
