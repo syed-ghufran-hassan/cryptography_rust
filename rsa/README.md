@@ -2,10 +2,10 @@
 
 This program demonstrates basic RSA encryption and decryption using the rsa crate in Rust. It:
 
-Generates a 2048-bit RSA key pair.
-Encrypts a message (plaintext) using the public key.
-Decrypts the encrypted message using the private key.
-Contains unit tests to validate correct functionality.
+- Generates a 2048-bit RSA key pair.
+- Encrypts a message (plaintext) using the public key.
+- Decrypts the encrypted message using the private key.
+- Contains unit tests to validate correct functionality.
 
 ## Imports and Padding Setup
 
@@ -15,10 +15,10 @@ use rsa::{PaddingScheme, PublicKey, RsaPrivateKey, RsaPublicKey};
 use sha2::Sha256;
 ```
 
-OsRng: Cryptographically secure random number generator.
-PaddingScheme: Defines how data is padded before encryption. Here, we use OAEP padding with SHA-256.
-RsaPrivateKey and RsaPublicKey: Key types for RSA encryption and decryption.
-Sha256: Hashing algorithm used for padding (necessary for OAEP padding).
+- OsRng: Cryptographically secure random number generator.
+- PaddingScheme: Defines how data is padded before encryption. Here, we use OAEP padding with SHA-256.
+- RsaPrivateKey and RsaPublicKey: Key types for RSA encryption and decryption.
+- Sha256: Hashing algorithm used for padding (necessary for OAEP padding).
 
 ## rsa_encrypt_decrypt Function
 
@@ -45,10 +45,10 @@ fn rsa_encrypt_decrypt(plaintext: &[u8]) -> (Vec<u8>, Vec<u8>) {
 }
 ```
 
-The plaintext input is the message to encrypt.
-RsaPrivateKey::new(&mut rng, bits): Generates a private key with 2048 bits.
-RsaPublicKey::from(&private_key): Extracts the public key from the private key.
-encrypt and decrypt methods: Used to encrypt with the public key and decrypt with the private key.
+- The plaintext input is the message to encrypt.
+- RsaPrivateKey::new(&mut rng, bits): Generates a private key with 2048 bits.
+- RsaPublicKey::from(&private_key): Extracts the public key from the private key.
+- encrypt and decrypt methods: Used to encrypt with the public key and decrypt with the private key.
 
 ## Unit tests
 
@@ -99,10 +99,10 @@ mod tests {
     }
 }
 ```
-test_encrypt_decrypt_valid_message: Encrypts a sample message and verifies it decrypts back to the original.
-test_padding_scheme: Ensures the padding scheme can be instantiated without errors.
-test_invalid_decryption: Attempts decryption with a different private key, which should result in an error.
-test_empty_plaintext: Tests encrypting and decrypting an empty message.
+- test_encrypt_decrypt_valid_message: Encrypts a sample message and verifies it decrypts back to the original.
+- test_padding_scheme: Ensures the padding scheme can be instantiated without errors.
+- test_invalid_decryption: Attempts decryption with a different private key, which should result in an error.
+- test_empty_plaintext: Tests encrypting and decrypting an empty message.
 
 The main function demonstrates a sample RSA encryption and decryption.
 
@@ -119,6 +119,6 @@ fn main() {
 }
 ```
 
-Encrypts the message "hello RSA world", prints both the encrypted and decrypted outputs.
-String::from_utf8_lossy: Converts bytes to a UTF-8 string for readable output.
+- Encrypts the message "hello RSA world", prints both the encrypted and decrypted outputs.
+- String::from_utf8_lossy: Converts bytes to a UTF-8 string for readable output.
 
