@@ -4,8 +4,4 @@ version = "0.1.0"
 edition = "2021"
 
 [dependencies]
-rsa = "0.6.0"
 rand = "0.8.5"
-curve25519-dalek = "3.2.0"
-hex = "0.4"  # Choose the latest version if needed
-sha2 = "0.10.6"     # Latest version as of now
