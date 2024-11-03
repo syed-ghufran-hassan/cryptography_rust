@@ -1,0 +1,12 @@
+[package]
+name = "task"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+sha2 = "0.10"     # For SHA-256
+sha3 = "0.10"     # For SHA-3
+blake2 = "0.10"   # For Blake2
+hex = "0.4"          # For encoding hash outputs in hexadecimal
+
+
