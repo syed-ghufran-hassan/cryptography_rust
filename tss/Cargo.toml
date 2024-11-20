@@ -1,0 +1,10 @@
+[package]
+name = "tss"
+version = "0.1.0"
+edition = "2021"
+
+
+[dependencies]
+curve25519-dalek = "4.0.0"
+rand = "0.8.5"
+serde = { version = "1.0", features = ["derive"] }
