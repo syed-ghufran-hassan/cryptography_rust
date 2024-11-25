@@ -1,0 +1,9 @@
+[package]
+name = "zk"
+version = "0.1.0"
+edition = "2021"
+
+
+[dependencies]
+rand = "0.8"       # For random number generation
+sha2 = "0.10"      # For hashing (used to simulate proof generation)
