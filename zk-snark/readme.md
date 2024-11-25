@@ -32,3 +32,17 @@ The project includes the generation of proving and verification keys. These keys
 ### Hashing Mechanism:
 
 The project uses SHA-256 as the hashing mechanism for creating the proof. This ensures that the proof data is derived from the proving key, public input, and private witness in a secure manner.
+
+## How the System Works:
+
+### Setup Phase:
+
+- A setup function is used to generate the proving and verification keys. These keys are randomly generated for the purpose of the proof system, and in real-world applications, these would be based on secure cryptographic parameters.
+
+### Proof Generation:
+
+- The prover creates a proof using the proving key and inputs the public data (public input) and the secret data (private witness). A cryptographic hash is created from these inputs, which forms the proof data.
+
+### Proof Verification:
+
+- The verifier uses the verification key and the public input to re-hash the data and compare it to the proof provided. If the hashes match, the proof is considered valid.
